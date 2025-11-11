@@ -8,5 +8,12 @@ public class GUI {
         frame.setSize(400,400);
          frame.setLayout(null);
          frame.setVisible(true);
+         JLabel l1 = new JLabel("Click the button");
+         l1.setBounds(123,65,100,30);
+         frame.add(l1);
+      //   JButton b1 = new JButton(new ImageIcon("D:\\Java Advance\\image.png"));
+        JButton b1 = new JButton("Click me");
+         b1.setBounds(120,100,100,50);
+         frame.add(b1);
     }
 }

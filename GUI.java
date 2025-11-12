@@ -1,5 +1,7 @@
 import java.util.Scanner;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
 public class GUI {
     public static void main(String[] args) {
@@ -53,24 +55,56 @@ public class GUI {
        // JOptionPane.showMessageDialog(frame, "Welcome to Hoshiyarpur", "Alert", JOptionPane.WARNING_MESSAGE);
         // String name = JOptionPane.showInputDialog(frame,"Enter your name");
         // System.out.println(name);
-      JMenuBar mb = new JMenuBar();
-      JMenu menu,submenu;
-      JMenuItem i1,i2,i3,i4,i5;
-      menu = new JMenu("Menu");
-      submenu = new JMenu("Sub Menu");
-      i1 = new JMenuItem("Item 1"); 
-      i2 = new JMenuItem("Item 2"); 
-      i3 = new JMenuItem("Item 3"); 
-      i4 = new JMenuItem("Item 4"); 
-      i5 = new JMenuItem("Item 5");
-      menu.add(i1);
-      menu.add(i2);
-      menu.add(i3);
-     submenu.add(i4);
-      submenu.add(i5);
-      menu.add(submenu);
-      mb.add(menu);
-      frame.setJMenuBar(mb);
+    //   JMenuBar mb = new JMenuBar();
+    //   JMenu menu,submenu;
+    //   JMenuItem i1,i2,i3,i4,i5;
+    //   menu = new JMenu("Menu");
+    //   submenu = new JMenu("Sub Menu");
+    //   i1 = new JMenuItem("Item 1"); 
+    //   i2 = new JMenuItem("Item 2"); 
+    //   i3 = new JMenuItem("Item 3"); 
+    //   i4 = new JMenuItem("Item 4"); 
+    //   i5 = new JMenuItem("Item 5");
+    //   menu.add(i1);
+    //   menu.add(i2);
+    //   menu.add(i3);
+    //  submenu.add(i4);
+    //   submenu.add(i5);
+    //   menu.add(submenu);
+    //   mb.add(menu);
+    //   frame.setJMenuBar(mb);
+
+    // color changer
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    //create a panel whose background will change
+    JPanel panel = new JPanel();
+    panel.setBounds(50,50,300,150);
+    panel.setBackground(Color.LIGHT_GRAY);
+    frame.add(panel);
+
+    //create buttons
+    JButton redButton = new JButton("Red");
+    JButton greenButton = new JButton("Green");
+    JButton blueButton = new JButton("Blue");
+
+    //Set button positions
+    redButton.setBounds(50,220,80,30);
+    greenButton.setBounds(160,220,80,30);
+    blueButton.setBounds(270,220,80,30);
+
+    //Add buttons to frame
+    frame.add(redButton);
+    frame.add(greenButton);
+    frame.add(blueButton);
+
+    //Add action listeners
+    redButton.addActionListener(e -> panel.setBackground(Color.RED));
+
+    greenButton.addActionListener(e -> panel.setBackground(Color.GREEN));
+
+     blueButton.addActionListener(e -> panel.setBackground(Color.BLUE));
+
 
 
        

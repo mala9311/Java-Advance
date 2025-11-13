@@ -74,31 +74,26 @@ public class GUI {
     //   mb.add(menu);
     //   frame.setJMenuBar(mb);
 
-    // color changer
+    // ########################color changer
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    //create a panel whose background will change
+    //#######################create a panel whose background will change
     JPanel panel = new JPanel();
     panel.setBounds(50,50,300,150);
     panel.setBackground(Color.LIGHT_GRAY);
     frame.add(panel);
 
-    //create buttons
+    //#######################create buttons
     JButton redButton = new JButton("Red");
     JButton greenButton = new JButton("Green");
     JButton blueButton = new JButton("Blue");
 
-    //Set button positions
-    redButton.setBounds(50,220,80,30);
-    greenButton.setBounds(160,220,80,30);
-    blueButton.setBounds(270,220,80,30);
-
-    //Add buttons to frame
+    //######################Add buttons to frame
     frame.add(redButton);
     frame.add(greenButton);
     frame.add(blueButton);
 
-    //Add action listeners
+    //###################Add action listeners
     redButton.addActionListener(e -> panel.setBackground(Color.RED));
 
     greenButton.addActionListener(e -> panel.setBackground(Color.GREEN));

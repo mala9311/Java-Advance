@@ -4,10 +4,8 @@ public class Exception01 {
         System.out.println("hello java");
     
         try{
-
-
-            int result = 5/0;
-        System.out.println(a[8]);
+             int result = 5/0;
+            System.out.println(a[8]);
          }
         // catch(ArrayIndexOutOfBoundsException | ArithmeticException | NullPointerException e){
         //     System.out.println("Handling the exception.");}

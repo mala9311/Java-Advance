@@ -11,9 +11,7 @@ public class FileChooser {
         Image icon = Toolkit.getDefaultToolkit().getImage("D:\\linkedin icon image.jpg");
         frame.setIconImage(icon);
          frame.setVisible(true);
-       //  File f = new File("D:\\linkedin icon image.jpg");
-//System.out.println(f.exists());
-
+       
 
 
         

@@ -12,7 +12,8 @@ public class JDBC {
         //Create statement 4
         Statement stm = con.createStatement();
         //Execute Query 5
-        String query = "INSERT INTO STUDENT VALUES(107,'ABC','12th',67,'pass')";
+       // String query = "INSERT INTO STUDENT VALUES(107,'ABC','12th',67,'pass')";
+       String query = "Update STUDENT set Rollno ='111', Name ='cde' where Rollno = '101'";
         stm.executeUpdate(query);
         // close connection 6
         con.close();

@@ -13,20 +13,22 @@ public class preparedStatementDemo {
         
         Connection con = DriverManager.getConnection(url,UserName,Password);
         //Create Statement 4
-        String query = "INSERT INTO table1 VALUES(104,'Raftaar','12th')";
-        PreparedStatement pstmt = con.prepareStatement("INSERT INTO table1 VALUES(?,?)");
+        String query = "INSERT INTO table1 VALUES(?,?,?)";
+        PreparedStatement pstmt = con.prepareStatement(query);
 
         //Execute Query 5
-        pstmt.setString(105,"Miky");
-        pstmt.executeUpdate(query);
+        pstmt.setInt(1, 105);
+        pstmt.setString(2,"Miky");
+        pstmt.setString(3,"12th");
+        pstmt.executeUpdate();
 
         // close Connection 6
         con.close();
-        System.out.println("Data Inserted");
+        System.out.println("Data Inserted Successfully");
 
         }
         catch(Exception e){
-            System.out.println("Data Inserted");
+            System.out.println(e.getMessage());
         }
         
     }

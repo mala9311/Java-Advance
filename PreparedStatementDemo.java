@@ -6,6 +6,7 @@ public class preparedStatementDemo {
     public static final String Password = "arch@18k";
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         try{
         //Load Server 2
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -17,9 +18,12 @@ public class preparedStatementDemo {
         PreparedStatement pstmt = con.prepareStatement(query);
 
         //Execute Query 5
-        pstmt.setInt(1, 105);
-        pstmt.setString(2,"Miky");
-        pstmt.setString(3,"12th");
+        int id = sc.nextInt();
+        String name = sc.nextLine();
+        String city = sc.nextLine();
+        pstmt.setInt(1, id);
+        pstmt.setString(2,name);
+        pstmt.setString(3,city);
         pstmt.executeUpdate();
 
         // close Connection 6
@@ -30,6 +34,7 @@ public class preparedStatementDemo {
         catch(Exception e){
             System.out.println(e.getMessage());
         }
+        sc.close();
         
     }
     
